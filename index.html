@@ -11,13 +11,11 @@
       rel="stylesheet"
     />
 
-    <!-- Standard favicon -->
     <link
       rel="icon"
       type="image/x-icon"
       href="https://www.torproject.org/static/images/favicon/favicon.ico"
     />
-    <!-- Recommended favicon format -->
     <link
       rel="icon"
       type="image/png"
@@ -27,51 +25,124 @@
 
     <style>
       * {
-        font-family: "Source Sans Pro Light", sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      body{
-        background: url(https://images.unsplash.com/photo-1649180562612-0dc7dcf5ac92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9yJTIwYnJvd3NlcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=720);
+      body {
+        background: url(""),
+          linear-gradient(to bottom, #000000, #401753) no-repeat center center
+            fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
       }
-      :root {
-        --primary: #59316b;
-      }
-      .container {
+      .main-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: absolute;
-        width: 400px;
+        width: 500px;
         height: 450px;
-        left: calc(50% - 400px / 2);
+        left: calc(50% - 500px / 2);
         top: calc(50% - 450px / 2);
-        background: linear-gradient(to bottom, var(--primary), black);
+        background: linear-gradient(to bottom, #59316b, black);
         border-radius: 5%;
         text-align: center;
-      }
-      h1 {
-        font-weight: 300;
-        font-size: calc(400px / 15);
-        color: white;
-        margin-top: 50px;
       }
       iframe {
         border-radius: 5%;
       }
+      h1 {
+        color: #eee;
+        width: 26.9ch;
+        font-family: "Source Sans Pro Light", sans-serif;
+        font-weight: 300;
+        font-size: 25px;
+        margin-top: 50px;
+      }
+      .typewrite {
+        color: #59316b;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 35px;
+      }
+      .typewrite .wrap {
+        padding-right: 2px;
+        height: 2ch;
+      }
     </style>
+
+    <script>
+      var TxtType = function (t, e, i) {
+        (this.toRotate = e),
+          (this.el = t),
+          (this.loopNum = 0),
+          (this.period = parseInt(i, 10) || 2e3),
+          (this.txt = ""),
+          this.tick(),
+          (this.isDeleting = !1);
+      };
+      (TxtType.prototype.tick = function () {
+        var t = this.loopNum % this.toRotate.length,
+          e = this.toRotate[t];
+        this.isDeleting
+          ? (this.txt = e.substring(0, this.txt.length - 1))
+          : (this.txt = e.substring(0, this.txt.length + 1)),
+          (this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>");
+        var i = this,
+          s = 200 - 100 * Math.random();
+        this.isDeleting && (s /= 2),
+          this.isDeleting || this.txt !== e
+            ? this.isDeleting &&
+              "" === this.txt &&
+              ((this.isDeleting = !1), this.loopNum++, (s = 500))
+            : ((s = this.period), (this.isDeleting = !0)),
+          setTimeout(function () {
+            i.tick();
+          }, s);
+      }),
+        (window.onload = function () {
+          for (
+            var t = document.getElementsByClassName("typewrite"), e = 0;
+            e < t.length;
+            e++
+          ) {
+            var i = t[e].getAttribute("data-type"),
+              s = t[e].getAttribute("data-period");
+            i && new TxtType(t[e], JSON.parse(i), s);
+          }
+          var n = document.createElement("style");
+          (n.innerHTML =
+            ".typewrite > .wrap { border-right: 0.10em solid #fff}"),
+            document.body.appendChild(n);
+        }),
+        document.querySelector(".html").addEventListener("click", () => {
+          document.querySelector(".cards").css("display");
+        });
+    </script>
   </head>
+
   <body>
     <main>
-      <div class="container">
+      <div class="main-container">
         <iframe
           src="https://snowflake.torproject.org/embed.html"
           width="320"
-          height="240"
+          height="250"
           frameborder="0"
           scrolling="no"
         ></iframe>
-        <h1>help circumvent censorship.</h1>
+
+        <h1>
+          help circumvent censorship in <br /><a
+            href=""
+            class="typewrite"
+            data-period="800"
+            data-type='[ "Cuba", "Iran", "Myanmar", "Syria", "Venezuela" ]'
+          ></a>
+        </h1>
       </div>
     </main>
   </body>
