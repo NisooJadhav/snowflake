@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Standard favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.torproject.org/static/images/favicon/favicon.ico"
+    />
+    <!-- Recommended favicon format -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.torproject.org/static/images/favicon/favicon.png"
+    />
+    <title>snowflake - help circumvent censorship</title>
+
+    <style>
+      * {
+        font-family: "Source Sans Pro Light", sans-serif;
+      }
+      body{
+        background: url(https://images.unsplash.com/photo-1649180562612-0dc7dcf5ac92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9yJTIwYnJvd3NlcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=720);
+        background-size: cover;
+      }
+      :root {
+        --primary: #59316b;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 400px;
+        height: 450px;
+        left: calc(50% - 400px / 2);
+        top: calc(50% - 450px / 2);
+        background: linear-gradient(to bottom, var(--primary), black);
+        border-radius: 5%;
+        text-align: center;
+      }
+      h1 {
+        font-weight: 300;
+        font-size: calc(400px / 15);
+        color: white;
+        margin-top: 50px;
+      }
+      iframe {
+        border-radius: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <iframe
+          src="https://snowflake.torproject.org/embed.html"
+          width="320"
+          height="240"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+        <h1>help circumvent censorship.</h1>
+      </div>
+    </main>
+  </body>
+</html>
