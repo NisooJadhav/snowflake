@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=azeret-mono@400&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="icon"
@@ -29,13 +33,7 @@
         padding: 0;
       }
       body {
-        background: url(""),
-          linear-gradient(to bottom, #000000, #401753) no-repeat center center
-            fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        background: #401753;
       }
       .main-container {
         display: flex;
@@ -47,7 +45,7 @@
         height: 450px;
         left: calc(50% - 500px / 2);
         top: calc(50% - 450px / 2);
-        background: linear-gradient(to bottom, #59316b, black);
+        background: linear-gradient(to bottom, #59316b, #101010);
         border-radius: 5%;
         text-align: center;
       }
@@ -64,13 +62,14 @@
       }
       .typewrite {
         color: #59316b;
-        font-weight: bold;
         text-decoration: none;
         font-size: 35px;
       }
       .typewrite .wrap {
         padding-right: 2px;
         height: 2ch;
+        font-family: "azeret mono", monospace;
+        color: lime;
       }
     </style>
 
