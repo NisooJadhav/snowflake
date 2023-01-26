@@ -71,6 +71,21 @@
         font-family: "azeret mono", monospace;
         color: lime;
       }
+
+      @media screen and (max-width: 650px) {
+        .main-container {
+          width: 340px;
+          height: 450px;
+          left: calc(50% - 340px / 2);
+          top: calc(50% - 450px / 2);
+        }
+        h1 {
+          font-size: 18px;
+        }
+        .typewrite {
+          font-size: 30px;
+        }
+      }
     </style>
 
     <script>
@@ -125,24 +140,26 @@
 
   <body>
     <main>
-      <div class="main-container">
-        <iframe
-          src="https://snowflake.torproject.org/embed.html"
-          width="320"
-          height="250"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
+      <center>
+        <div class="main-container">
+          <iframe
+            src="https://snowflake.torproject.org/embed.html"
+            width="320"
+            height="250"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
 
-        <h1>
-          help circumvent censorship in <br /><a
-            href=""
-            class="typewrite"
-            data-period="800"
-            data-type='[ "Cuba", "Iran", "Myanmar", "Syria", "Venezuela" ]'
-          ></a>
-        </h1>
-      </div>
+          <h1>
+            help circumvent censorship in <br /><a
+              href=""
+              class="typewrite"
+              data-period="800"
+              data-type='[ "Cuba", "Iran", "Myanmar", "Syria", "Venezuela" ]'
+            ></a>
+          </h1>
+        </div>
+      </center>
     </main>
   </body>
 </html>
