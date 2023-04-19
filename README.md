@@ -1,2 +1,2 @@
-# [snowflake](https://snowflake.surge.sh/)
+# [Snowflake](https://snowflake.surge.sh/) ❄
 help circumvent censorship.
